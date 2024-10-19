@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task List</title>
+  <link rel="stylesheet" href="Task_list.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>Task List</h2>
+      <button class="add-button" onclick="add()">+</button>
+    </div>
+
+    <div id="task-container" class="task-list">
+      <div class="task">
+        <p><strong>Task 1:</strong> Finish homework</p>
+        <p>Due: 2024-10-12</p>
+      </div>
+      <div class="task">
+        <p><strong>Task 2:</strong> Clean room</p>
+        <p>Due: 2024-10-14</p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <button class="footer-button" onclick="signOut()">Sign Out</button>
+      <button class="footer-button" onclick="openSettings()">Settings</button>
+      <button class="footer-button" onclick="completed()">Completed</button>
+    </div>
+  </div>
+
+  <script src="Task_list.js"></script>
+</body>
+</html>

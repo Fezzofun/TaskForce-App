@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Task</title>
+    <link rel="stylesheet" href="add.css">
+</head>
+<body>
+    <div class="add-task-page">
+        <button onclick="goBack()" class="back-btn">&larr;</button>
+        <h2>Add</h2>
+
+        <form id="add-task-form">
+            <input type="text" id="task-title" placeholder="Title..." class="input-field">
+            <textarea id="task-desc" placeholder="Description..." class="textarea-field"></textarea>
+            <input type="date" id="due-date" class="input-field">
+            <input type="text" id="category" placeholder="Category..." class="input-field">
+            <select id="priority" class="input-field">
+                <option value="">Priority...</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+            <div class="action-buttons">
+                <button type="button" onclick="saveTask()" class="save-btn">Save</button>
+                <button type="button" onclick="goBack()" class="cancel-btn">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="add.js"></script>
+</body>
+</html>

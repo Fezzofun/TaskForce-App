@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.add-task-page {
+    width: 350px;
+    padding: 20px;
+    background-color: #90ee90;
+    border: 3px solid #ff69b4;
+    border-radius: 30px;
+    text-align: center;
+}
+
+h2 {
+    background-color: #90ee90;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.back-btn {
+    background-color: #d3d3d3;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.input-field, .textarea-field {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #d3d3d3;
+}
+
+.textarea-field {
+    height: 80px;
+}
+
+select.input-field {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.save-btn, .cancel-btn {
+    background-color: #ff69b4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background-color: #d3d3d3;
+}
