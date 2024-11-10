@@ -1,5 +1,9 @@
 function validateLogin(email, password) {
-    return email === "hello@example.com" && password === "world123";
+    if (!email || !password) {
+        alert("Please enter both email and password.");
+        return false;
+    }
+    return true;
 }
 
 function handleLogin(event) {
@@ -15,4 +19,5 @@ function handleLogin(event) {
         alert("Invalid email or password.");
     }
 }
+
 document.getElementById('login-form').addEventListener('submit', handleLogin);

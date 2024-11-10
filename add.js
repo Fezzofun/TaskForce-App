@@ -10,20 +10,26 @@ function saveTask() {
     let priority = document.getElementById('priority').value;
 
     if (title && description && dueDate && category && priority) {
-        let task = {
-            title: title,
-            description: description,
-            dueDate: dueDate,
-            category: category,
-            priority: priority
-        };
-
-        let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-        tasks.push(task);
-        localStorage.setItem('tasks', JSON.stringify(tasks));
-
-        alert('Task saved successfully!');
-        window.location.href = 'Task_list.html';
+        fetch('http://localhost:5000/tasks', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                title: title,
+                description: description,
+                due_date: dueDate,
+                category: category,
+                priority: priority,
+                status: 'pending'
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert('Task saved successfully!');
+            window.location.href = 'Task_list.html';
+        })
+        .catch(error => console.error('Error adding task:', error));
     } else {
         alert('Please fill out all fields.');
     }

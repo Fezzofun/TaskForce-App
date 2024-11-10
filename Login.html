@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="apple-touch-icon" href="tf_Icon.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Task Force Login</title>
@@ -19,8 +21,11 @@
         <label for="password">Password:</label>
         <input type="password" id="password" placeholder="Enter Password..." required>
       </div>
-
-      <button type="submit" class="login-button">Login in</button>
+      
+      <div class="button-container">
+        <button type="submit" class="login-button">Log in</button>
+        <button type="button" onclick="window.location.href='signup.html'" class="signup-button">Sign Up</button>
+      </div>
     </form>
   </div>
 
