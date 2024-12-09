@@ -4,31 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Task</title>
-    <link rel="stylesheet" href="add.css">
+    <link rel="stylesheet" href="add.css"> <!-- Link the CSS for styling -->
 </head>
 <body>
     <div class="add-task-page">
+        <!-- Button to go back to the task list -->
         <button onclick="goBack()" class="back-btn">&larr;</button>
         <h2>Add</h2>
 
+        <!-- Form to collect task details -->
         <form id="add-task-form">
-            <input type="text" id="task-title" placeholder="Title..." class="input-field">
-            <textarea id="task-desc" placeholder="Description..." class="textarea-field"></textarea>
-            <input type="date" id="due-date" class="input-field">
-            <input type="text" id="category" placeholder="Category..." class="input-field">
-            <select id="priority" class="input-field">
+            <input type="text" id="task-title" placeholder="Title..." class="input-field"> <!-- Task title -->
+            <textarea id="task-desc" placeholder="Description..." class="textarea-field"></textarea> <!-- Task description -->
+            <input type="date" id="due-date" class="input-field"> <!-- Due date -->
+            <input type="text" id="category" placeholder="Category..." class="input-field"> <!-- Category -->
+            <select id="priority" class="input-field"> <!-- Priority dropdown -->
                 <option value="">Priority...</option>
                 <option value="Low">Low</option>
                 <option value="Medium">Medium</option>
                 <option value="High">High</option>
             </select>
+            <!-- Action buttons -->
             <div class="action-buttons">
-                <button type="button" onclick="saveTask()" class="save-btn">Save</button>
-                <button type="button" onclick="goBack()" class="cancel-btn">Cancel</button>
+                <button type="button" onclick="saveTask()" class="save-btn">Save</button> <!-- Save button -->
+                <button type="button" onclick="goBack()" class="cancel-btn">Cancel</button> <!-- Cancel button -->
             </div>
         </form>
     </div>
 
+    <!-- Link to JavaScript for form functionality -->
     <script src="add.js"></script>
 </body>
 </html>

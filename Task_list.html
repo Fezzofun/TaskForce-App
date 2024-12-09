@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Sets the character encoding to UTF-8 -->
   <meta charset="UTF-8">
+  
+  <!-- Ensures the page scales correctly on mobile devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Title of the task list page -->
   <title>Task List</title>
+  
+  <!-- Link to the CSS file for styling -->
   <link rel="stylesheet" href="Task_list.css">
 </head>
 <body>
+  <!-- Container for the task list page -->
   <div class="container">
+    <!-- Header section with title and add button -->
     <div class="header">
       <h2>Task List</h2>
       <button class="add-button" onclick="add()">+</button>
     </div>
 
+    <!-- Section to display the list of tasks -->
     <div id="task-container" class="task-list">
+      <!-- Example task 1 -->
       <div class="task">
         <p><strong>Task 1:</strong> Finish homework</p>
         <p>Due: 2024-10-12</p>
@@ -22,6 +33,7 @@
           <button class="delete-button" onclick="deleteTask(0)">Delete</button>
         </div>
       </div>
+      <!-- Example task 2 -->
       <div class="task">
         <p><strong>Task 2:</strong> Clean room</p>
         <p>Due: 2024-10-14</p>
@@ -32,6 +44,7 @@
       </div>
     </div>
 
+    <!-- Footer with navigation buttons -->
     <div class="footer">
       <button class="footer-button" onclick="signOut()">Sign Out</button>
       <button class="footer-button" onclick="openSettings()">Settings</button>
@@ -39,6 +52,7 @@
     </div>
   </div>
 
+  <!-- Link to the JavaScript file for task list functionality -->
   <script src="Task_list.js"></script>
 </body>
 </html>

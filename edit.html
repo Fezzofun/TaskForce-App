@@ -4,36 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Edit Task</title>
-  <link rel="stylesheet" href="edit.css">
+  <link rel="stylesheet" href="edit.css"> <!-- Link to CSS for styling -->
 </head>
 <body>
   <div class="edit-container">
     <div class="edit-header">
+      <!-- Button to navigate back to the task list -->
       <button class="back-button" onclick="goBack()">←</button>
-      <h2>Edit</h2>
+      <h2>Edit</h2> <!-- Page title -->
     </div>
 
+    <!-- Form to edit the task details -->
     <form id="edit-form">
+      <!-- Input for the task title -->
       <div class="input-field">
         <label for="title">Title:</label>
         <input type="text" id="title" placeholder="Title..." required>
       </div>
 
+      <!-- Text area for the task description -->
       <div class="input-field">
         <label for="description">Description:</label>
         <textarea id="description" placeholder="Description..."></textarea>
       </div>
 
+      <!-- Input for the due date -->
       <div class="input-field">
         <label for="due-date">Due Date:</label>
         <input type="date" id="due-date" required>
       </div>
 
+      <!-- Input for the task category -->
       <div class="input-field">
         <label for="category">Category:</label>
         <input type="text" id="category" placeholder="Category..." required>
       </div>
 
+      <!-- Dropdown for priority selection -->
       <div class="input-field">
         <label for="priority">Priority:</label>
         <select id="priority" required>
@@ -43,13 +50,14 @@
         </select>
       </div>
 
+      <!-- Buttons for save and cancel actions -->
       <div class="button-group">
-        <button type="button" class="save-button" onclick="saveTask()">Save</button>
-        <button type="button" class="cancel-button" onclick="cancelEdit()">Cancel</button>
+        <button type="button" class="save-button" onclick="saveTask()">Save</button> <!-- Save changes -->
+        <button type="button" class="cancel-button" onclick="cancelEdit()">Cancel</button> <!-- Cancel edit -->
       </div>
     </form>
   </div>
 
-  <script src="edit.js"></script>
+  <script src="edit.js"></script> <!-- Link to JavaScript for functionality -->
 </body>
 </html>

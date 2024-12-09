@@ -1,27 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Link to the manifest file for the PWA setup -->
   <link rel="manifest" href="/manifest.json">
+  
+  <!-- Apple-specific icon for app shortcuts -->
   <link rel="apple-touch-icon" href="tf_Icon.png">
+  
   <meta charset="UTF-8">
+  
+  <!-- Makes the page responsive to different screen sizes -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <title>Task Force Login</title>
+  
+  <!-- Link to the CSS file for styling -->
   <link rel="stylesheet" href="Login.css">
 </head>
 <body>
+  <!-- Main container for the login section -->
   <div class="login-container">
     <h2>Task Force</h2>
+    <!-- Form for login details -->
     <form id="login-form">
+      <!-- Input field for the user's email -->
       <div class="input-field">
         <label for="email">Email:</label>
         <input type="email" id="email" placeholder="Enter email..." required>
       </div>
 
+      <!-- Input field for the user's password -->
       <div class="input-field">
         <label for="password">Password:</label>
         <input type="password" id="password" placeholder="Enter Password..." required>
       </div>
       
+      <!-- Buttons for login and navigation to sign-up -->
       <div class="button-container">
         <button type="submit" class="login-button">Log in</button>
         <button type="button" onclick="window.location.href='signup.html'" class="signup-button">Sign Up</button>
@@ -29,6 +43,7 @@
     </form>
   </div>
 
+  <!-- Link to the JavaScript file for login functionality -->
   <script src="Login.js"></script>
 </body>
 </html>

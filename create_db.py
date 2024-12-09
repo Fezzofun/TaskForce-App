@@ -1,10 +1,10 @@
 import sqlite3
 
-# Creates the database
+# Connect to the SQLite database (or create it if it doesn't exist)
 conn = sqlite3.connect('task_force.db')
 cursor = conn.cursor()
 
-# Creates the Tasks table
+# Create the `tasks` table
 cursor.execute('''
     CREATE TABLE IF NOT EXISTS tasks (
         task_id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -16,7 +16,7 @@ cursor.execute('''
     )
 ''')
 
-# Creates the Users table
+# Create the `users` table
 cursor.execute('''
     CREATE TABLE IF NOT EXISTS users (
         user_id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -25,7 +25,7 @@ cursor.execute('''
     )
 ''')
 
-# Creates the Categories table
+# Create the `categories` table
 cursor.execute('''
     CREATE TABLE IF NOT EXISTS categories (
         category_id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -33,7 +33,7 @@ cursor.execute('''
     )
 ''')
 
-# Creates the Task_Comments table
+# Create the `task_comments` table
 cursor.execute('''
     CREATE TABLE IF NOT EXISTS task_comments (
         comment_id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -44,7 +44,7 @@ cursor.execute('''
     )
 ''')
 
-# Commits the code and closes the connection
+# Commit the changes and close the connection
 conn.commit()
 conn.close()
 
