@@ -24,8 +24,26 @@ def create_users_table():
     conn.commit()
     conn.close()
 
-# Call create_users_table to ensure the users table exists
+# Ensure the tasks table exists
+def create_tasks_table():
+    conn = connect_db()
+    cursor = conn.cursor()
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS tasks (
+            task_id INTEGER PRIMARY KEY AUTOINCREMENT,
+            title TEXT NOT NULL,
+            description TEXT,
+            priority TEXT DEFAULT 'normal',
+            due_date TEXT,
+            status TEXT DEFAULT 'pending'
+        )
+    ''')
+    conn.commit()
+    conn.close()
+
+# Call create_users_table and create_tasks_table to ensure tables exist
 create_users_table()
+create_tasks_table()
 
 # Sign up route with `email` field instead of `username`
 @app.route('/signup', methods=['POST'])

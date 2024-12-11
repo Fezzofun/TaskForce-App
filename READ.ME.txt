@@ -1,0 +1,59 @@
+# TaskForce: A To-Do List Application
+
+## Overview
+TaskForce is a simple and user-friendly to-do list application designed to help you stay organized and manage your tasks efficiently. It supports creating, editing, and deleting tasks while providing a clean, responsive interface for a smooth user experience.
+
+## Features
+- Add new tasks with titles and descriptions.
+- Edit existing tasks to update details.
+- Delete tasks when they are no longer needed.
+- View all tasks in a scrollable list.
+- Offline support via Progressive Web App (PWA) capabilities.
+
+## How to Use
+1. Clone the repository from GitHub.
+2. Install all required dependencies using the command:
+   ```
+   npm install
+   ```
+3. Start the application locally:
+   ```
+   npm start
+   ```
+4. Open your browser and navigate to `http://localhost:5000`.
+5. Interact with the app to add, edit, delete, and view tasks.
+
+## Technologies Used
+- **Frontend:** HTML, CSS, JavaScript
+- **Backend:** Flask (Python)
+- **Database:** SQLite
+- **Other Tools:** Flask-CORS, PWA support
+
+## Installation Instructions
+1. Ensure you have Node.js and Python installed.
+2. Clone this repository:
+   ```
+   git clone [repository-link]
+   ```
+3. Navigate to the project directory:
+   ```
+   cd taskforce
+   ```
+4. Install dependencies for both frontend and backend.
+5. Start the backend server and frontend server as described above.
+
+## Known Issues
+- Some UI alignment adjustments are still in progress.
+- CORS setup may require manual configuration.
+
+## Future Enhancements
+- Add user authentication for secure task management.
+- Include task categories or tags for better organization.
+- Implement reminders or due date notifications.
+
+## License
+This project is open-source and available under the MIT License.
+
+---
+
+Thank you for using TaskForce! Feel free to contribute or share feedback on GitHub.

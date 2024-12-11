@@ -47,6 +47,11 @@ function validateEmail(email) {
 window.onload = function() {
     loadSettings(); // Load saved settings
 
+    // Attach event listener for back button
+    document.getElementById('backButton').addEventListener('click', function () {
+        window.location.href = 'Task_list.html'; // Navigate to the task list page
+    });
+
     // Attach an event listener to save settings on form submission
     document.getElementById('settings-form').onsubmit = function(event) {
         event.preventDefault(); // Prevent the default form submission behavior
